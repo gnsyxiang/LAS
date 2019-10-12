@@ -1,0 +1,7 @@
+
+# ignore pattern
+
+# ignore dirs
+node_modules/
+
+# ignore files
