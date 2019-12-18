@@ -1,7 +1,11 @@
 
 # ignore pattern
 
-# ignore dirs
-node_modules/
 
 # ignore files
+
+# ignore dirs
+node_modules/
+_book/
+
+
