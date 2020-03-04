@@ -7,4 +7,11 @@
 * [gitbook](README.md)
   - [gitbook安装](gitbook/install.md)
   - [gitbook基本使用](gitbook/basic_skills.md)
+* [autotools](autotools/README.md)
+  - [demo](autotools/demo.md)
+  - [autoscan](autotools/autoscan.md)
+  - [aclocal](autotools/aclocal.md)
+  - [autoheader](autotools/autoheader.md)
+  - [aotomake](autotools/aotomake.md)
+  - [autoconf](autotools/autoconf.md)
 
