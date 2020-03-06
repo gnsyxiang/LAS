@@ -14,4 +14,7 @@
   - [autoheader](autotools/autoheader.md)
   - [aotomake](autotools/aotomake.md)
   - [autoconf](autotools/autoconf.md)
+* [git](autotools/README.md)
+  - [git](git/git.md)
+  - [repo_guide](git/repo_guide.md)
 
