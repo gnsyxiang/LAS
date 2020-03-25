@@ -12,7 +12,7 @@
   - [autoscan](autotools/autoscan.md)
   - [aclocal](autotools/aclocal.md)
   - [autoheader](autotools/autoheader.md)
-  - [aotomake](autotools/aotomake.md)
+  - [automake](autotools/automake.md)
   - [autoconf](autotools/autoconf.md)
 * [git](autotools/README.md)
   - [git](git/git.md)
