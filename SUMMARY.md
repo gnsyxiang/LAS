@@ -17,4 +17,8 @@
 * [git](autotools/README.md)
   - [git](git/git.md)
   - [repo_guide](git/repo_guide.md)
+* [code-coverage](code-coverage/README.md)
+  - [gcov](code-coverage/gcov.md)
+  - [genhtml](code-coverage/genhtml.md)
+  - [lcov](code-coverage/lcov.md)
 
