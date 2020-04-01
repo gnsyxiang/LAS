@@ -27,4 +27,8 @@
   - [basic_command_use](gdb/basic_command_use.md)
   - [break_non-stop](gdb/break_non-stop.md)
   - [coredump](gdb/coredump.md)
+* [soft-install](soft-install/README.md)
+  - [install](soft-install/install.md)
+  - [uninstall](soft-install/uninstall.md)
+  - [mqtt-install](soft-install/mqtt-install.md)
 
