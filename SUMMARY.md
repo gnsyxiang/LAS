@@ -34,4 +34,6 @@
 * [audio](audio/README.md)
   - [alsa-lib-study](audio/alsa-lib-study.md)
   - [alsa-study](audio/alsa-study.md)
+* [bookmarks](bookmarks/README.md)
+  - [bookmarks](bookmarks/bookmarks.md)
 
