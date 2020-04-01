@@ -31,4 +31,7 @@
   - [install](soft-install/install.md)
   - [uninstall](soft-install/uninstall.md)
   - [mqtt-install](soft-install/mqtt-install.md)
+* [audio](audio/README.md)
+  - [alsa-lib-study](audio/alsa-lib-study.md)
+  - [alsa-study](audio/alsa-study.md)
 
