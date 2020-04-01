@@ -21,4 +21,6 @@
   - [gcov](code-coverage/gcov.md)
   - [genhtml](code-coverage/genhtml.md)
   - [lcov](code-coverage/lcov.md)
+* [valgrind](valgrind/README.md)
+  - [valgrind](valgrind/valgrind.md)
 
