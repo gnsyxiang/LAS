@@ -23,4 +23,8 @@
   - [lcov](code-coverage/lcov.md)
 * [valgrind](valgrind/README.md)
   - [valgrind](valgrind/valgrind.md)
+* [gdb](gdb/README.md)
+  - [basic_command_use](gdb/basic_command_use.md)
+  - [break_non-stop](gdb/break_non-stop.md)
+  - [coredump](gdb/coredump.md)
 
