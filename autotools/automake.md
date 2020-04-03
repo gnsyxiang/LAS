@@ -29,7 +29,12 @@ LIBS          = -lpthread -levent
 | hello_LDADD   | 编译成可执行文件过程中，连接所需的库文件，包括\*.so的动态库文件和.a的静态库文件。
 | hello_LDFLAGS | 连接的时候所需库文件的标识
 
-#### 静态库文件类型
+#### 动/静态库文件类型
+
+LIBRARIES。表示库文件
+LTLIBRARIES。这也是表示库文件，前面的LT表示libtool。
+
+> 一般推荐使用libtool库编译目标，因为automake包含libtool，这对于跨平台可移植的库来说，肯定是一个福音。
 
 ```txt
 noinst_LIBRARIES  = libpro.a          #生成的静态库文件名称，noinst加上之后是只编译，不安装到系统中。
@@ -47,17 +52,31 @@ libpro_a_LDFLAGS  =                   #连接的时候所需库文件的标识
 
 > 注意：静态库使用中，需要对configure.ac中加入AC_PROG_RANLIB
 
-#### 动态库文件类型
+#### 链接库
 
-
+静态库编译连接时需要其它的库的话，采用XXXX_LIBADD选项，而不是前面的XXXX_LDADD。
+编译静态库是比较简单的，因为直接可以指定其类型。
 
 #### 头文件
 
 | 标签名            | 说明
 | -                 | -
 |include_HEADERS    | 安装到`--prefix=`指定的目录中
+|noinst_HEADERS     | 不安装
+
+
 
 #### 分发(make dist)和安装(make install)
+
+Automake会自动的打包，自动打包的内容如下：
+
+* 所有源文件。
+* 所有的Makefile.am文件。
+* configure读取的文件。
+* Makefile.am中包含的文件。
+* EXTRA_DIST指定的文件。
+* 采用dist及nodist指定的文件，如可以将某一源文件指定为不打包：
+* nodist_client_SOURCES = client.c
 
 ```txt
 confdir=${prefix}/conf    #conf为目录名称(需要在源码中创建), dir为每个文件夹变量必须带上
@@ -67,12 +86,23 @@ EXTRA_DIST=conf           #在make dist打包的时候也要将扩展文件夹�
 
 
 
-
 #### 数据文件
+
+| 标签名            | 说明
+| -                 | -
+| example_DATA      | 数据文件，不能执行
 
 
 #### 脚本文件
 
+| 标签名            | 说明
+| -                 | -
+| example_SCRIPTS   | 脚本文件，这个可以被用于执行.
+
+```txt
+exampledir=${prefix}/example  #conf为目录名称(需要在源码中创建), dir为每个文件夹变量必须带上
+example_SCRIPTS=build.sh
+```
 
 #### 常用变量
 
@@ -93,10 +123,4 @@ EXTRA_DIST=conf           #在make dist打包的时候也要将扩展文件夹�
 # _LIBRARIES 生成库文件
 # make dist 发布文件时，source文件也会打到发布的文件中
 
-noinst_HEADERS = xxx.h
-#这个表示该头文件只是参加可执行文件的编译，而不用安装到安装目录下。如果需要安装到系统中，
-#可以用include_HEADERS来代替
 
-xxx_CPPFLAGS = -DCONFIG_DIR=\"$(sysconfdir)\" -DLIBRARY_DIR=\"$(pkglibdir)\"
-#xxx_CPPFLAGS 这和Makefile文件中一样，表示C语言预处理参数，这里指定了DCONFIG_DIR，以后
-#在程序中，就可以直接使用CONFIG_DIR。不要把这个和另一个CFLAGS混淆，后者表示编译器参数
