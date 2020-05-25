@@ -36,4 +36,6 @@
   - [alsa-study](audio/alsa-study.md)
 * [bookmarks](bookmarks/README.md)
   - [bookmarks](bookmarks/bookmarks.md)
+* [gcc](gcc/README.md)
+  - [objdump](gcc/objdump/objdump.md)
 
