@@ -39,4 +39,6 @@
   - [bookmarks](bookmarks/bookmarks.md)
 * [gcc](gcc/README.md)
   - [objdump](gcc/objdump/objdump.md)
+* [patch](patch/README.md)
+  - [patch/diff](patch/patch_diff.md)
 
