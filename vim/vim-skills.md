@@ -24,6 +24,15 @@ vim中二进制文件的编辑是先通过外部程序xxd来把文件dump成其�
 
 ```
 args **/*.[ch]
+args **/*.cpp
+```
+
+这里`**` 表示递归地搜索所有子目录
+
+* 打开more选项，列表消息会在全屏填满时暂停，通过nomore选项关闭就不会有暂停，列表消息会继续进行直到结束为止
+
+```
+set nomore
 ```
 
 * 把x_cnt替换成x_counter
@@ -31,17 +40,12 @@ args **/*.[ch]
 ```
 :argdo %s/\<x_cnt\>/x_counter/ge | update 
 argdo %s/\<\>//ge | update
+argdo %s///ge | update
 ```
 
 > 命令中加\<，\>表示完全匹配，就不会匹配px_cnt和x_cnt2
 > 标志"e"则用于避免某些文件中一个"x_cnt"都找不到时的错误消息。否则的话":argdo"命令遇到这些错误就会终止整个操作。
 > 后面的"update"命令会在文件有改变时进行保存。如果没有一个"x_cnt"被替换为"x_counter"那就不进行任何操作。 
-
-* 打开more选项，列表消息会在全屏填满时暂停，通过nomore选项关闭就不会有暂停，列表消息会继续进行直到结束为止
-
-```
-set nomore
-```
 
 
 
